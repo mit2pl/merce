@@ -12,7 +12,7 @@ INSERT INTO `settings` (`name`, `value`) VALUES
 class database {
     function __construct() {
         try {
-            $this->database = new PDO("mysql:host=localhost;dbname=merce", "root", "plokij", [PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            $this->database = new PDO("mysql:host=localhost;dbname=merce", "root", "password", [PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         }
         catch(PDOException $error) {
             exit($error->getMessage());
